@@ -20,3 +20,4 @@ By downloading this repository (and possibly later the Google Store), and enabli
 ## Future Endeavours
   - Carousel to display all the classes that students are enrolled in on any given day of the week.
   - Similar features to the Zoom popup and link table for assignments.
+  - A corresponding mobile application.
