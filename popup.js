@@ -1,25 +1,41 @@
-
 // post the data to chrome.storage 
 function postData() {
     
     // select input value 
     var _class = document.getElementById("class").value;
-    var link = document.getElementById("link").value;
-    var time = document.getElementById("time").value;
+    var form_link = document.getElementById("link").value;
+    var form_time = document.getElementById("time").value;
 
     // adds class, [link, time] to json
-    chrome.storage.sync.set({_class: [link, time]}, function() {
-        console.log(`${_class} is set to ${value}`);
+    chrome.storage.sync.set({course: [form_link, form_time]}, function() {
+        console.log(`${_class} is set to ${form_link}, at ${form_time}`);
     });
-
-    alert("test");
+    
+    getData();
 }
 
+const setStorageData = data =>
+  new Promise((resolve, reject) =>
+    chrome.storage.sync.set(data, () =>
+      chrome.runtime.lastError
+        ? reject(Error(chrome.runtime.lastError.message))
+        : resolve(console.log(`${_class} is set to ${form_link}, at ${form_time}`);
+        )
+    )
+  )
+
+await setStorageData({ data: [someData] }).
+
+function getData() {
+    chrome.storage.sync.get(['key'], function(result) {
+        console.log('Value currently is ' + result.key);
+      });
+}
 document.addEventListener('DOMContentLoaded', function() {
     var submit = document.getElementById('submit');
     // onClick's logic below:
     submit.addEventListener('click', function() {
-        console.log("test");
+        postData()
     });
 });
 
