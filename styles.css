@@ -1,0 +1,11 @@
+#content {
+    text-align: center;
+    margin: 320px auto auto;
+    font-family: 'Montserrat', sans-serif;
+    color: pink;
+}
+
+#background-img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
