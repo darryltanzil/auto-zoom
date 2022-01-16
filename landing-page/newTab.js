@@ -44,8 +44,8 @@ function checkForTime() {
 currentDate();
 
 function changeBackground() {
-    var imgNumber = Math.floor((Math.random() * 5));
-    var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg'];
+    var imgNumber = Math.floor((Math.random() * 4));
+    var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'];
     document.body.style.background = "url('background-images/" + images[imgNumber] + "')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "100% 227%";
