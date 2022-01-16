@@ -25,8 +25,8 @@ function currentDate() {
 currentDate();
 
 function changeBackground() {
-    var imgNumber = Math.floor((Math.random() * 4));
-    var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'];
+    var imgNumber = Math.floor((Math.random() * 6));
+    var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'];
     document.body.style.background = "url('background-images/" + images[imgNumber] + "')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "100% 200%";
