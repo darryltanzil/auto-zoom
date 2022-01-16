@@ -45,6 +45,7 @@ function getData() {
     
             });
     });
+    shootHTML();
 }
 
 function shootHTML() {
