@@ -1,12 +1,9 @@
 #content {
     text-align: center;
-    margin: 150px auto auto;
+    margin: 130px auto auto;
     font-family: 'Montserrat', sans-serif;
     color: #EEEEEE;
-}
-
-#date, #time {
-
+    font-size: 2rem;
 }
 
 #logo {
@@ -14,7 +11,32 @@
     width: 70px;
 }
 
+#name {
+    border-radius: 1rem;
+    font-size: 15px;
+    margin-right: 5px;
+    padding: 10px 15px;
+}
+
+.btn {
+    background-color: white;
+    color: #4856AB;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #EEEEEE;
+}
+
 #background-img {
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.hidden {
+    visibility: hidden;
 }

@@ -12,12 +12,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="newTab.js"></script>
     
     <title>New Tab</title>
 </head>
 <body>
-    <img id="logo" src="images/FuzeLogo.png" alt="Fuze-Logo">
+    <img id="logo" src="images/darkblue.png" alt="Fuze-Logo">
 
     <div id="content">
         <span id="day"></span> 
@@ -25,10 +24,12 @@
         <br>
         <h1><span id="time"></span></h1>
         <h2>What is your name?</h2>
-        <input type="text" name="name" id="name">
-        <input type="button" id="enterName" value="Enter">
+        <input type="text" name="name" id="name" autofocus placeholder="Your Name">
+        <input class="btn" type="button" id="enterName" value="Enter">
 
     </div>
+
+    <script src="newTab.js"></script>
 
 </body>
 </html>

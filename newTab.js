@@ -31,3 +31,27 @@ function changeBackground() {
             }
 
 changeBackground();
+
+document.querySelector('#enterName').addEventListener("click", function() {
+        var today = new Date();
+        var hour = today.getHours();
+        
+        var name = document.querySelector("#name").value;
+
+        if (hour < 12) {
+            greeting = "morning";
+        }
+
+        else if (hour >= 12 && hour < 18) {
+            greeting = "afternoon";
+        }
+
+        else {
+            greeting = "evening";
+        }
+
+        document.querySelector('h2').innerHTML = "Good " + greeting + ", " + name + "!";
+
+        document.querySelector("#name").classList.add("hidden");
+        document.querySelector("#enterName").classList.add("hidden");
+    })
