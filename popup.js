@@ -26,6 +26,9 @@ function getData() {
                var cube = allKeys[i];
                for(var j = 0; j <= 7; j++) {
                    alert("cube[" + i + "][" + j + "] = " + cube[j]);
+
+                   // append to monday div
+                   document.getElementById('tag-id').innerHTML = '<tr>' +  + '<tr>';
                }
            }
     });
