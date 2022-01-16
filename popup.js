@@ -13,7 +13,7 @@ function postData() {
 
     // adds class, [link, time] to json
     chrome.storage.sync.set({[_class] : [form_link, form_time, mon, tue, wed, thu, fri, _class]}, function() {
-        alert(`${_class} is set to ${form_link}, at ${form_time}, on ${mon + tue + wed + thu + fri}`);
+       // alert(`${_class} is set to ${form_link}, at ${form_time}, on ${mon + tue + wed + thu + fri}`);
     });
     getData();
 }
@@ -21,7 +21,7 @@ function postData() {
 function getData() {
     chrome.storage.sync.get(null, function(items) {
         var allKeys = Object.values(items);
-        alert(allKeys);
+        //alert(allKeys);
         var stringtoAdd = "";
 
            for(var i = 0; i < allKeys.length; i++) {
@@ -39,7 +39,7 @@ function getData() {
                 }
                stringtoAdd = stringtoAdd + "</tr>";
            }
-           alert(stringtoAdd);
+           //alert(stringtoAdd);
             chrome.storage.sync.set({current_code : stringtoAdd}, function() {
     
             });
