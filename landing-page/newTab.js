@@ -30,11 +30,11 @@ function checkForTime() {
         var allKeys = Object.values(items);
            for(var i = 0; i < allKeys.length; i++) {
                var cube = allKeys[i];
-                if (cube[1].concat(":00") == today_.format("HH:MM:ss")) {
-                    window.open(cube[0], '_blank');
+                if (cube[2].concat(":00") == today_.format("HH:MM:ss")) {
+                    window.open(cube[1], '_blank');
                 }
                 else{
-                    console.log(cube[1].concat(":00") + "==" + today_.format("HH:MM:ss"));
+                    console.log(cube[2].concat(":00") + "==" + today_.format("HH:MM:ss"));
                 }
            }
     });
@@ -190,4 +190,17 @@ document.querySelector('#enterName').addEventListener("click", function() {
     Date.prototype.format = function (mask, utc) {
         return dateFormat(this, mask, utc);
     };
+
+function shootHTML() {
+    chrome.storage.sync.get(['current_code'], function(result) {
+        if (result.current_code) {
+            document.getElementById("class_monday").innerHTML = result.current_code;
+        }
+        else {
+            document.getElementById("class_monday").innerHTML = "<p>Add some classes to view them here!</p>";
+        }
+    });
+}
+
+shootHTML();
     

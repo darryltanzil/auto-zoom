@@ -54,3 +54,7 @@
     height: 200px;
     border: none;
 }
+
+.carousel-item {
+    text-align: center;
+}
