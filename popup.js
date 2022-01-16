@@ -14,18 +14,6 @@ function postData() {
     getData();
 }
 
-const setStorageData = data =>
-  new Promise((resolve, reject) =>
-    chrome.storage.sync.set(data, () =>
-      chrome.runtime.lastError
-        ? reject(Error(chrome.runtime.lastError.message))
-        : resolve(console.log(`${_class} is set to ${form_link}, at ${form_time}`);
-        )
-    )
-  )
-
-await setStorageData({ data: [someData] }).
-
 function getData() {
     chrome.storage.sync.get(['key'], function(result) {
         console.log('Value currently is ' + result.key);
