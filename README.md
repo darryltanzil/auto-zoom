@@ -2,7 +2,7 @@
 # FuZe Chrome Extension - (automatic zoom link opener)
 
 ## Description
-Developed for the NwHacks hackathon, FuZe attempts to automate a mundane problem that plagues university student and office worker alike- forgetting to open a zoom link.
+Developed for the NwHacks hackathon, FuZe attempts to automate a mundane problem that plagues university student and office worker alike in the pandemic era - forgetting to open a zoom link.
 
 ## Features
 
@@ -14,4 +14,5 @@ Our intuitive Zoom Popup page completely removes the hassle of frantically searc
 
 
 ## Installation
- 
+
+
