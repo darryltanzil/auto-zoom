@@ -3,7 +3,7 @@
     "description": "A chrome extension developed for automatically opening zoom links!",
     "version": "1.0",
     "manifest_version": 3,
-    "chrome_url_overrides": { "newtab": "newtab.html" },
+    "chrome_url_overrides": { "newtab": "/landing-page/newTab.html" },
     "options_page": "options.html",
     "permissions": ["storage", "activeTab", "scripting"],
     "action": {
