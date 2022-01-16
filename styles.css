@@ -48,6 +48,7 @@ p {
     height: 50px;
     width: 80px;
     color: white;
+    border-radius: 1.5rem;
 }
 
 #submit:hover {
