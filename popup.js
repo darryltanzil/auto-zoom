@@ -22,15 +22,20 @@ function getData() {
     chrome.storage.sync.get(null, function(items) {
         var allKeys = Object.values(items);
         alert(allKeys);
+        var stringtoAdd = "";
+
            for(var i = 0; i < allKeys.length; i++) {
                var cube = allKeys[i];
+               stringtoAdd = "<tr>";
                for(var j = 0; j <= 7; j++) {
                    alert("cube[" + i + "][" + j + "] = " + cube[j]);
 
                    // append to monday div
-                   document.getElementById('tag-id').innerHTML = '<tr>' +  + '<tr>';
-               }
+                   stringtoAdd = stringtoAdd + '<tr>' + cube[j] + '</tr>';
+                }
+               stringtoAdd = stringtoAdd + "</tr>";
            }
+           document.getElementById("class_monday").innerHTML = stringtoAdd;
     });
 }
 
