@@ -1,0 +1,38 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, label {
+    color: white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #4856AB;
+}
+
+form {
+    text-align: center;
+    font-family:georgia;
+    font-size: 15px;
+}
+
+p {
+    text-align: center;
+    font-family:georgia;
+    font-size: 15px;
+    color: white;
+}
+
+input {
+    border-radius: 1rem;
+}
+
+#submit {
+    background-color: #ab9d48;
+    font-size: 1.5rem;
+    height: 50px;
+    width: 80px;
+    color: white;
+}
