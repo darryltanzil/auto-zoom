@@ -42,10 +42,35 @@
   <p>
     Current classes:
     <br>
-    <div id="class_monday" style="width:100%">
-                           
-    </div>
+    <table style="width:100%; color: white;">
+      <tr>
+        <th>Link</th>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursdays</th>
+        <th>Fridays</th>
+        <th>Class</th>
+      </tr>
+      <table id="class_monday">  </table>
   </p>
+  <style>
+    table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+  </style>
 
 </body>
 <script src="popup.js"></script>

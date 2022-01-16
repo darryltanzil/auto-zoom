@@ -44,7 +44,12 @@ function getData() {
 
 function shootHTML() {
     chrome.storage.sync.get(['current_code'], function(result) {
-        document.getElementById("class_monday").innerHTML = result.current_code;
+        if (result.current_code) {
+            document.getElementById("class_monday").innerHTML = result.current_code;
+        }
+        else {
+            document.getElementById("class_monday").innerHTML = "<p style='text-align: center;'>Add some classes to view them here!</p>";
+        }
     });
 }
 
