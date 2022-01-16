@@ -19,8 +19,25 @@ function currentDate() {
         document.getElementById("date").innerHTML = date;
         document.getElementById("day").innerHTML = days[day];
         currentDate();
+        checkForTime();
     }, 1000)
 }
+
+
+function checkForTime() {
+    var today_ = new Date();
+    chrome.storage.sync.get(null, function(items) {
+        var allKeys = Object.values(items);
+           for(var i = 0; i < allKeys.length; i++) {
+               var cube = allKeys[i];
+               stringtoAdd = stringtoAdd + "<tr>";
+                if (cube[1] == today_.format("H:MM")) {
+                    window.open(cube[0], '_blank');
+                }
+           }
+    });
+}
+
 
 currentDate();
 
