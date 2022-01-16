@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 
-<body>
+  <head>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
 
     <h1>ZOOM LINKS</h1>
 
-    <form action="/action_page.php">
+    <form id="zoomForm">
         <label for="class">Class:</label><br>
         <input type="text" id="class" name="class" value=""><br><br>
 
@@ -12,13 +16,13 @@
         <input type="text" id="link" name="link" value=""><br><br>
 
         <label for="time">Class Time:</label><br>
-        <input type="text" id="time" name="time" value=""><br><br>
+        <input type="time" id="time" name="time" value=""><br><br>
 
-        <input type="submit" value="Add">
+        <input type="submit" id="submit" value="Add">
     </form>
 
     <p>Click the "Add" button to add this zoom link to your list.</p>
 
-</body>
+  </body>
 
 </html>
