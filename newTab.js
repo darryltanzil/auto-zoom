@@ -13,7 +13,8 @@ function currentDate() {
     setTimeout(function() {
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var today = new Date();
-        var date = today.toLocaleDateString();
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var date = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
         var day = today.getDay();
         document.getElementById("date").innerHTML = date;
         document.getElementById("day").innerHTML = days[day];
