@@ -12,17 +12,23 @@ function postData() {
     var fri = (document.getElementById("friday").checked === true)? "Fridays " : "";
 
     // adds class, [link, time] to json
-    chrome.storage.sync.set({course: [form_link, form_time, mon, tue, wed, thu, fri]}, function() {
+    chrome.storage.sync.set({[_class] : [form_link, form_time, mon, tue, wed, thu, fri, _class]}, function() {
         alert(`${_class} is set to ${form_link}, at ${form_time}, on ${mon + tue + wed + thu + fri}`);
     });
-    
     getData();
 }
 
 function getData() {
-    chrome.storage.sync.get(['key'], function(result) {
-        console.log('Value currently is ' + result.key);
-      });
+    chrome.storage.sync.get(null, function(items) {
+        var allKeys = Object.values(items);
+        alert(allKeys);
+           for(var i = 0; i < allKeys.length; i++) {
+               var cube = allKeys[i];
+               for(var j = 0; j <= 7; j++) {
+                   alert("cube[" + i + "][" + j + "] = " + cube[j]);
+               }
+           }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
