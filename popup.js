@@ -31,7 +31,11 @@ function getData() {
                    // alert("cube[" + i + "][" + j + "] = " + cube[j]);
 
                    // append to monday div
-                   stringtoAdd = stringtoAdd + '<th>' + cube[j] + '</th>';
+                   if (cube[j] == ""){
+                        stringtoAdd = stringtoAdd + '<th> </th>';
+                   } else {
+                        stringtoAdd = stringtoAdd + '<th>' + cube[j] + '</th>';
+                }
                 }
                stringtoAdd = stringtoAdd + "</tr>";
            }
@@ -48,7 +52,7 @@ function shootHTML() {
             document.getElementById("class_monday").innerHTML = result.current_code;
         }
         else {
-            document.getElementById("class_monday").innerHTML = "<p style='text-align: center;'>Add some classes to view them here!</p>";
+            document.getElementById("class_monday").innerHTML = "<p>Add some classes to view them here!</p>";
         }
     });
 }
