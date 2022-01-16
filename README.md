@@ -14,5 +14,4 @@ Our intuitive Zoom Popup page completely removes the hassle of frantically searc
 
 
 ## Installation
-
-
+By downloading this repository (and possibly later the Google Store), and enabling the Chrome extension, students will be able to use both the popup, as well as the new tab page. The new tab page will appear whenever a new tab is opened, and the Zoom popup can be shown by clicking the FuZe icon that appears in the top right bar of the browser window.
