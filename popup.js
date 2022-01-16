@@ -26,18 +26,29 @@ function getData() {
 
            for(var i = 0; i < allKeys.length; i++) {
                var cube = allKeys[i];
-               stringtoAdd = "<tr>";
+               stringtoAdd = stringtoAdd + "<tr>";
                for(var j = 0; j <= 7; j++) {
-                   alert("cube[" + i + "][" + j + "] = " + cube[j]);
+                   // alert("cube[" + i + "][" + j + "] = " + cube[j]);
 
                    // append to monday div
-                   stringtoAdd = stringtoAdd + '<tr>' + cube[j] + '</tr>';
+                   stringtoAdd = stringtoAdd + '<th>' + cube[j] + '</th>';
                 }
                stringtoAdd = stringtoAdd + "</tr>";
            }
-           document.getElementById("class_monday").innerHTML = stringtoAdd;
+           alert(stringtoAdd);
+            chrome.storage.sync.set({current_code : stringtoAdd}, function() {
+    
+            });
     });
 }
+
+function shootHTML() {
+    chrome.storage.sync.get(['current_code'], function(result) {
+        document.getElementById("class_monday").innerHTML = result.current_code;
+    });
+}
+
+shootHTML();
 
 document.addEventListener('DOMContentLoaded', function() {
     var submit = document.getElementById('submit');
