@@ -27,9 +27,10 @@ currentDate();
 function changeBackground() {
     var imgNumber = Math.floor((Math.random() * 4));
     var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'];
-    $('html').css({'background-image': 'url(background-images/' + images[imgNumber],
-                });
-            }
+    document.body.style.background = "url('background-images/" + images[imgNumber] + "')";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "100% 200%";
+}
 
 changeBackground();
 
