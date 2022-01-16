@@ -5,10 +5,15 @@ function postData() {
     var _class = document.getElementById("class").value;
     var form_link = document.getElementById("link").value;
     var form_time = document.getElementById("time").value;
+    var mon = document.getElementById("monday").value;
+    var tue = document.getElementById("tuesday").value;
+    var wed = document.getElementById("wednesday").value;
+    var thu = document.getElementById("thursday").value;
+    var fri = document.getElementById("friday").value;
 
     // adds class, [link, time] to json
     chrome.storage.sync.set({course: [form_link, form_time]}, function() {
-        console.log(`${_class} is set to ${form_link}, at ${form_time}`);
+        console.log(`${_class} is set to ${form_link}, at ${form_time}, on ${mon+tue+wed+thu+fri}`);
     });
     
     getData();
