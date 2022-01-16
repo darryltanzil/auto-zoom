@@ -1,11 +1,20 @@
 #content {
     text-align: center;
-    margin: 320px auto auto;
+    margin: 150px auto auto;
     font-family: 'Montserrat', sans-serif;
-    color: pink;
+    color: #EEEEEE;
+}
+
+#date, #time {
+
+}
+
+#logo {
+    margin: 15px 0 0 20px;
+    width: 70px;
 }
 
 #background-img {
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
