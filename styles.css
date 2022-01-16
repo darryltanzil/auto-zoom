@@ -1,38 +1,58 @@
-body {
-    font-family: 'Open Sans', sans-serif;
+.words {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1 {
+    margin-top: 5px;
 }
 
 h1, label {
-    color: white;
+    color: black;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    background-color: #4856AB;
+    background-color: #B1D0E0 !important;
+}
+
+table {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+
 }
 
 form {
     text-align: center;
-    font-family:georgia;
     font-size: 15px;
 }
 
 p {
     text-align: center;
-    font-family:georgia;
     font-size: 15px;
-    color: white;
+    color: black;
 }
 
-input {
-    border-radius: 1rem;
+.text {
+    width: 60%;
+    text-align: center;
 }
+
+.day {
+    margin: 0 15px 0 0;
+}
+
 
 #submit {
-    background-color: #ab9d48;
+    background-color: #396EB0;
     font-size: 1.5rem;
     height: 50px;
     width: 80px;
     color: white;
 }
+
+#submit:hover {
+    background-color: #548CFF;
+    opacity: 80%;
+}
+
+
