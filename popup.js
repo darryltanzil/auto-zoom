@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-let changeColor = document.getElementById("changeColor");
-
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
-});
-
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
-  });
-=======
 // post the data to chrome.storage 
 function postData() {
     
@@ -35,19 +19,11 @@ function getData() {
         console.log('Value currently is ' + result.key);
       });
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     var submit = document.getElementById('submit');
     // onClick's logic below:
     submit.addEventListener('click', function() {
         postData()
     });
->>>>>>> bd766d8f71e1f1f79e2d7261b87e713901e12b64
 });
-
-// The body of this function will be executed as a content script inside the
-// current page
-function setPageBackgroundColor() {
-  chrome.storage.sync.get("color", ({ color }) => {
-    document.body.style.backgroundColor = color;
-  });
-}
