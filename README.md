@@ -4,6 +4,7 @@
 ## Description
 Developed for the NwHacks hackathon, FuZe attempts to automate a mundane problem that plagues university student and office worker alike in the pandemic era - forgetting to open a zoom link.
 
+https://user-images.githubusercontent.com/5387769/169952969-30697f74-cc3c-4b04-b110-489b7c679838.mp4
 
 ## Features
 
